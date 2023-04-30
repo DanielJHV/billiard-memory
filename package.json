@@ -1,0 +1,22 @@
+{
+  "name": "memory-card",
+  "version": "1.0.0",
+  "description": "Memory card game created with HTML, Sass and JS.",
+  "main": "index.js",
+  "scripts": {
+    "node-sass": "sass -w scss/:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJHV/memory-card.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielJHV/memory-card/issues"
+  },
+  "homepage": "https://github.com/DanielJHV/memory-card#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
