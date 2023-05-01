@@ -1,9 +1,17 @@
 .header {
   @include flexCenter();
-  height: 6.2rem;
+  padding: 2.4rem;
 }
 
-.heading-primary {
-  font-size: 4.8rem;
-  color: $color-text;
+.main {
+  @include flexCenter;
+  height: 100%;
+}
+
+.table {
+  height: 56rem;
+  width: 112rem;
+  background-color: $color-primary;
+  border: 5px solid #000;
+  border-radius: 13px;
 }

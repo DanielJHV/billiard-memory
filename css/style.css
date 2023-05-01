@@ -13,23 +13,36 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  background-color: #402805;
-}
-
-.container {
-  width: 120rem;
+  background-color: #4f3105;
+  font-family: "Laila", sans-serif;
 }
 
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 6.2rem;
+  padding: 2.4rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.table {
+  height: 56rem;
+  width: 112rem;
+  background-color: #2c8257;
+  border: 5px solid #000;
+  border-radius: 13px;
 }
 
 .heading-primary {
   font-size: 4.8rem;
   color: #f7f7f7;
+  letter-spacing: -1px;
 }
 
 /*# sourceMappingURL=style.css.map */

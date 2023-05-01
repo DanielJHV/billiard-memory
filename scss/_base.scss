@@ -1,5 +1,5 @@
-$color-primary: #36594a;
-$color-secondary: #402805;
+$color-primary: #2c8257;
+$color-secondary: #4f3105;
 $color-text: #f7f7f7;
 
 @mixin flexCenter {
@@ -24,8 +24,5 @@ body {
   justify-content: space-between;
   height: 100vh;
   background-color: $color-secondary;
-}
-
-.container {
-  width: 120rem;
+  font-family: 'Laila', sans-serif;
 }
