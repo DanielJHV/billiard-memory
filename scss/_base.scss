@@ -1,0 +1,31 @@
+$color-primary: #36594a;
+$color-secondary: #402805;
+$color-text: #f7f7f7;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: $color-secondary;
+}
+
+.container {
+  width: 120rem;
+}

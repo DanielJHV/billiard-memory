@@ -1,0 +1,9 @@
+.header {
+  @include flexCenter();
+  height: 6.2rem;
+}
+
+.heading-primary {
+  font-size: 4.8rem;
+  color: $color-text;
+}
