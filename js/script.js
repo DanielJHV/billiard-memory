@@ -2,16 +2,7 @@ const tableEl = document.querySelector('.table');
 const movesEl = document.querySelector('.moves');
 
 let moves = 0;
-
 movesEl.textContent = `Moves: ${moves}`;
-
-// const addCards = function () {
-//   for (let i = 0; i < 12; i++) {
-//     const card = document.createElement('div');
-//     card.classList.add('card');
-//     tableEl.append(card);
-//   }
-// };
 
 const getData = function () {
   return [
@@ -33,12 +24,14 @@ const getData = function () {
 const randomize = function () {
   const cardData = getData();
   cardData.sort(() => Math.random() - 0.5);
+  console.log(cardData);
   return cardData;
 };
 
 const generateCards = function () {
   const cardData = randomize();
-  cardData.forEach(item => {
+
+  cardData.forEach((item, index) => {
     const card = document.createElement('div');
     const face = document.createElement('img');
     const back = document.createElement('div');
@@ -48,10 +41,50 @@ const generateCards = function () {
     back.classList = 'back';
 
     face.src = item.imgSrc;
+    card.setAttribute('name', item.name);
+
     tableEl.appendChild(card);
     card.appendChild(face);
     card.appendChild(back);
+
+    card.addEventListener('click', function (e) {
+      card.classList.add('clicked');
+      checkCards(e);
+    });
   });
 };
 
 generateCards();
+
+const checkCards = function (e) {
+  const allCards = document.querySelectorAll('.card');
+  const clickedCard = e.target;
+  clickedCard.classList.add('flipped');
+  const flippedCards = document.querySelectorAll('.flipped');
+  if (flippedCards.length === 2) {
+    if (flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')) {
+      console.log('match');
+
+      flippedCards.forEach(card => {
+        card.classList.remove('flipped');
+        card.style.pointerEvents = 'none';
+      });
+    } else {
+      allCards.forEach(card => {
+        card.style.pointerEvents = 'none';
+      });
+      console.log('wrong');
+      flippedCards.forEach(card => {
+        card.classList.remove('flipped');
+        setTimeout(() => {
+          card.classList.remove('clicked');
+          allCards.forEach(card => {
+            card.style.pointerEvents = 'auto';
+          });
+        }, 1000);
+      });
+    }
+    moves += 1;
+    movesEl.textContent = `Moves: ${moves}`;
+  }
+};

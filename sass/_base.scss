@@ -1,5 +1,5 @@
-$color-primary: #2c8257;
-$color-secondary: #252220;
+$color-primary: #287850;
+$color-secondary: #2c8257;
 
 $color-light: #f7f7f7;
 $color-dark: #1e1202;
@@ -25,6 +25,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  background-color: $color-secondary;
+  background-color: $color-primary;
   font-family: 'Laila', sans-serif;
 }
