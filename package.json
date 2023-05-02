@@ -4,7 +4,7 @@
   "description": "Memory card game created with HTML, Sass and JS.",
   "main": "index.js",
   "scripts": {
-    "node-sass": "sass -w scss/:css"
+    "node-sass": "sass -w sass/:css"
   },
   "repository": {
     "type": "git",
