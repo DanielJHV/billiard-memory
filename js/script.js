@@ -1,5 +1,10 @@
+'use strict';
+
 const tableEl = document.querySelector('.table');
 const movesEl = document.querySelector('.moves');
+const modalEl = document.querySelector('.modal');
+const winningText = document.querySelector('.winning-message__text');
+const restartBtn = document.querySelector('.restart-btn');
 
 let moves = 0;
 movesEl.textContent = `Moves: ${moves}`;
@@ -62,6 +67,8 @@ const checkCards = function (e) {
   clickedCard.classList.add('flipped');
   const flippedCards = document.querySelectorAll('.flipped');
   if (flippedCards.length === 2) {
+    moves += 1;
+    movesEl.textContent = `Moves: ${moves}`;
     if (flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')) {
       console.log('match');
 
@@ -69,6 +76,7 @@ const checkCards = function (e) {
         card.classList.remove('flipped');
         card.style.pointerEvents = 'none';
       });
+      verifyWin(allCards);
     } else {
       allCards.forEach(card => {
         card.style.pointerEvents = 'none';
@@ -84,7 +92,33 @@ const checkCards = function (e) {
         }, 1000);
       });
     }
-    moves += 1;
-    movesEl.textContent = `Moves: ${moves}`;
   }
 };
+
+const restartGame = function () {
+  tableEl.innerHTML = '';
+  modalEl.classList.add('hidden');
+  generateCards();
+};
+
+const endGame = function () {
+  winningText.textContent = `You've successfully completed the game in ${moves} moves.`;
+  modalEl.classList.remove('hidden');
+};
+
+const verifyWin = function (allCards) {
+  let clickedCards = 0;
+  allCards.forEach(card => {
+    if (card.classList.contains('clicked')) {
+      clickedCards += 1;
+      console.log(clickedCards);
+    }
+
+    if (clickedCards === 12) {
+      console.log('You won!');
+      endGame();
+    }
+  });
+};
+
+restartBtn.addEventListener('click', restartGame);
