@@ -29,7 +29,6 @@ const getData = function () {
 const randomize = function () {
   const cardData = getData();
   cardData.sort(() => Math.random() - 0.5);
-  console.log(cardData);
   return cardData;
 };
 
@@ -70,8 +69,6 @@ const checkCards = function (e) {
     moves += 1;
     movesEl.textContent = `Moves: ${moves}`;
     if (flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')) {
-      console.log('match');
-
       flippedCards.forEach(card => {
         card.classList.remove('flipped');
         card.style.pointerEvents = 'none';
@@ -81,7 +78,6 @@ const checkCards = function (e) {
       allCards.forEach(card => {
         card.style.pointerEvents = 'none';
       });
-      console.log('wrong');
       flippedCards.forEach(card => {
         card.classList.remove('flipped');
         setTimeout(() => {
@@ -113,11 +109,9 @@ const verifyWin = function (allCards) {
   allCards.forEach(card => {
     if (card.classList.contains('clicked')) {
       clickedCards += 1;
-      console.log(clickedCards);
     }
 
     if (clickedCards === 12) {
-      console.log('You won!');
       endGame();
     }
   });
