@@ -22,6 +22,14 @@
   border: 9px solid #000;
   border-radius: 19px;
   perspective: 1200px;
+
+  @media screen and (max-width: 33em) {
+    gap: 2rem;
+    height: 33rem;
+    width: 66rem;
+    padding: 2.6rem;
+    border: 6px solid #000;
+  }
 }
 
 .card {
@@ -33,6 +41,10 @@
   transform-style: preserve-3d;
   transition: all 1s;
   cursor: pointer;
+
+  @media screen and (max-width: 33em) {
+    border-radius: 9px;
+  }
 }
 
 .face {
@@ -45,6 +57,10 @@
   background: linear-gradient(90deg, rgb(181, 128, 5) 37%, rgb(189, 144, 7) 100%);
   border-radius: 19px;
   backface-visibility: hidden;
+
+  @media screen and (max-width: 33em) {
+    border-radius: 9px;
+  }
 }
 
 .face,
@@ -61,6 +77,15 @@
   color: $color-light;
   font-size: 2.4rem;
   font-weight: 600;
+
+  @media screen and (max-width: 58em) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 46em) {
+    margin-top: 2.4rem;
+    font-size: 4.4rem;
+  }
 }
 
 .modal {
@@ -94,10 +119,37 @@
     font-size: 3.2rem;
     font-weight: 600;
     letter-spacing: -1px;
+
+    @media screen and (max-width: 58em) {
+      font-size: 4rem;
+    }
+
+    @media screen and (max-width: 46em) {
+      font-size: 4.6rem;
+    }
   }
 
   &__text {
     font-size: 1.8rem;
+
+    @media screen and (max-width: 58em) {
+      font-size: 2.4rem;
+    }
+
+    @media screen and (max-width: 46em) {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 58em) {
+    height: 35rem;
+    width: 70rem;
+  }
+
+  @media screen and (max-width: 46em) {
+    height: 40rem;
+    width: 80rem;
+    padding: 3.2rem;
   }
 }
 
@@ -115,6 +167,16 @@
   &:hover {
     background-color: $color-secondary;
   }
+
+  @media screen and (max-width: 58em) {
+    padding: 1.4rem 5.6rem;
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 46em) {
+    padding: 1.6rem 7rem;
+    font-size: 3rem;
+  }
 }
 
 .footer {
@@ -129,6 +191,26 @@
     font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: -0.75px;
+
+    @media screen and (max-width: 75em) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: 58em) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 46em) {
+      font-size: 2.4rem;
+    }
+  }
+
+  @media screen and (max-width: 58em) {
+    padding: 2.2rem;
+  }
+
+  @media screen and (max-width: 46em) {
+    padding: 2.6rem;
   }
 }
 
@@ -138,5 +220,17 @@
 
   &:hover {
     fill: #eee;
+  }
+
+  @media screen and (max-width: 58em) {
+    height: 2.6rem;
+  }
+
+  @media screen and (max-width: 46em) {
+    height: 2.8rem;
+  }
+
+  @media screen and (max-width: 33em) {
+    height: 3rem;
   }
 }

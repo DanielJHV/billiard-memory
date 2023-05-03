@@ -1,8 +1,6 @@
 $color-primary: #287850;
 $color-secondary: #2c8257;
-
 $color-light: #f7f7f7;
-$color-dark: #1e1202;
 
 @mixin flexCenter {
   display: flex;
@@ -18,6 +16,19 @@ $color-dark: #1e1202;
 
 html {
   font-size: 62.5%;
+
+  @media screen and (max-width: 75em) {
+    font-size: 50%;
+  }
+  @media screen and (max-width: 58em) {
+    font-size: 40%;
+  }
+  @media screen and (max-width: 46em) {
+    font-size: 30%;
+  }
+  // @media screen and (max-width: 36em) {
+  //   font-size: 20%;
+  // }
 }
 
 body {

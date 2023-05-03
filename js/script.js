@@ -97,6 +97,8 @@ const checkCards = function (e) {
 
 const restartGame = function () {
   tableEl.innerHTML = '';
+  moves = 0;
+  movesEl.textContent = `Moves: ${moves}`;
   modalEl.classList.add('hidden');
   generateCards();
 };
