@@ -11,18 +11,18 @@ movesEl.textContent = `Moves: ${moves}`;
 
 const getData = function () {
   return [
-    { imgSrc: '../img/ball-yellow.png', name: 'yellow' },
-    { imgSrc: '../img/ball-blue.png', name: 'blue' },
-    { imgSrc: '../img/ball-purple.png', name: 'purple' },
-    { imgSrc: '../img/ball-orange.png', name: 'orange' },
-    { imgSrc: '../img/ball-red.png', name: 'red' },
-    { imgSrc: '../img/ball-black.png', name: 'black' },
-    { imgSrc: '../img/ball-yellow.png', name: 'yellow' },
-    { imgSrc: '../img/ball-blue.png', name: 'blue' },
-    { imgSrc: '../img/ball-purple.png', name: 'purple' },
-    { imgSrc: '../img/ball-orange.png', name: 'orange' },
-    { imgSrc: '../img/ball-red.png', name: 'red' },
-    { imgSrc: '../img/ball-black.png', name: 'black' },
+    { imgSrc: 'img/ball-yellow.png', name: 'yellow' },
+    { imgSrc: 'img/ball-blue.png', name: 'blue' },
+    { imgSrc: 'img/ball-purple.png', name: 'purple' },
+    { imgSrc: 'img/ball-orange.png', name: 'orange' },
+    { imgSrc: 'img/ball-red.png', name: 'red' },
+    { imgSrc: 'img/ball-black.png', name: 'black' },
+    { imgSrc: 'img/ball-yellow.png', name: 'yellow' },
+    { imgSrc: 'img/ball-blue.png', name: 'blue' },
+    { imgSrc: 'img/ball-purple.png', name: 'purple' },
+    { imgSrc: 'img/ball-orange.png', name: 'orange' },
+    { imgSrc: 'img/ball-red.png', name: 'red' },
+    { imgSrc: 'img/ball-black.png', name: 'black' },
   ];
 };
 
